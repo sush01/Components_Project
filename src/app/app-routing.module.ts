@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ElementsHomeComponent } from './elements/elements-home/elements-home.component';
-import { CollectionsHomeComponent } from './collections/collections-home/collections-home.component';
-import { ViewsHomeComponent } from './views/views-home/views-home.component';
-import { ModsHomeComponent } from './mods/mods-home/mods-home.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 const routes: Routes = [
-  {path: 'elements', component: ElementsHomeComponent},
-  {path: 'collections', component: CollectionsHomeComponent},
-  {path: 'views', component: ViewsHomeComponent},
-  {path: 'mods', component: ModsHomeComponent}
+  {path: 'elements', 
+    loadChildren: () => 
+    import('./elements/elements.module').then((m) => m.ElementsModule)},
+  {path: 'collections', 
+      loadChildren: () => 
+      import('./collections/collections.module').then((m) => m.CollectionsModule)},
+  {path: 'views', 
+        loadChildren: () => 
+        import('./views/views.module').then((m) => m.ViewsModule)},
+  {path: 'mods', 
+          loadChildren: () => 
+          import('./mods/mods.module').then((m) => m.ModsModule)},
 
-
+  {path: '', component:HomeComponent},
+  {path: '**', component:NotFoundComponent}
 ];
 
 @NgModule({
