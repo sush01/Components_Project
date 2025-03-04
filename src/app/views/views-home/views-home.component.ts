@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ViewsHomeComponent {
 
+  stats:{ value: number, label: string }[] = [
+    {value: 22, label: '# of Users'},
+    {value: 900, label: 'Revenue'},
+    {value: 50, label: 'Reviews'}
+  ]
+
 }

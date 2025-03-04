@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-statistics',
@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './statistics.component.css'
 })
 export class StatisticsComponent {
+
+  @Input() data:{ value: number, label: string }[] =[];
 
 }
