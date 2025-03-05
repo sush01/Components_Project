@@ -3,3 +3,8 @@
   margin: 20px 0;
   text-align: center;
 }
+:host:not(:first-of-type){
+  display: block;
+  margin-top: 20px;
+
+}

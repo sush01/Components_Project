@@ -19,11 +19,11 @@ export class ViewsHomeComponent {
   ];
 
   items: {image: string, title:string, description:string} []=[
-    { image: '/assets/images/iphone.jpeg',
+    { image: 'assets/images/iphone.jpeg',
       title: 'Iphone 16 Pro Max 5G',
       description: 'This is a new  version of Iphone'
     },
-    { image: '/assets/images/samsung.jpeg',
+    { image: 'assets/images/samsun.jpeg',
       title: 'Samsung Galaxy S24 Ultra 5G',
       description: 'This is a new Samsung Galaxy S24 Ultra 5G '
     }
